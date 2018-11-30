@@ -39,7 +39,22 @@ class _CameraScreenState extends State<CameraScreen> {
     }
     return new AspectRatio(
       aspectRatio: controller.value.aspectRatio,
-      child: new CameraPreview(controller),
+      child: new Scaffold(
+        body: CameraPreview(controller),
+        floatingActionButton: Container(
+          width: 100.0,
+          height: 100.0,
+          child: new RawMaterialButton(
+            shape: new CircleBorder(),
+            elevation: 0.0,
+            child: new Icon(
+              Icons.camera,size: 30.0,color: Colors.green ,
+            ),
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      ),
+
       
     );
   }
