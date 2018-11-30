@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'whatsappHome.dart';
+import 'package:camera/camera.dart';
+
+
+List<CameraDescription> cameras;
 
 
 
+Future<Null> main() async{
 
+cameras = await availableCameras();
 
-
-void main(){
   runApp(new MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -19,7 +23,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xff25d366)
       ),
     debugShowCheckedModeBanner: false,
-      home: new whatsappHome()    
+      home: new whatsappHome(cameras)    
       );
   }
 }

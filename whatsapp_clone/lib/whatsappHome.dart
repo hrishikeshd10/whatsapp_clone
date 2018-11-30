@@ -9,6 +9,9 @@ import 'pages/chatScreen.dart';
 
 
 class whatsappHome extends StatefulWidget {
+ var cameras;
+ whatsappHome(this.cameras);
+
   _whatsappHomeState createState() => _whatsappHomeState();
 }
 
@@ -55,7 +58,7 @@ class _whatsappHomeState extends State<whatsappHome> with SingleTickerProviderSt
        body:  new TabBarView(
          controller: _tabController,
          children: <Widget>[
-           new CameraScreen(),
+           new CameraScreen(widget.cameras),
            new  ChatScreen(),
            new  StatusScreen(),
            new  CallScreen()
