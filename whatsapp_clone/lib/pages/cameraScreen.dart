@@ -47,8 +47,10 @@ class _CameraScreenState extends State<CameraScreen> {
           child: new RawMaterialButton(
             shape: new CircleBorder(),
             elevation: 0.0,
+            onPressed: (){},
             child: new Icon(
               Icons.camera,size: 30.0,color: Colors.green ,
+          
             ),
           ),
         ),

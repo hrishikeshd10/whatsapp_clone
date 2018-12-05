@@ -24,6 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 radius: 28.0,                
                 foregroundColor: Theme.of(context).primaryColor,
                 backgroundColor: Colors.grey,
+              
                 backgroundImage: new NetworkImage(dummyData[i].avatarUrl),  
                 ),
                 title: new Row(
